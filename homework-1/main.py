@@ -16,7 +16,7 @@ with open('north_data/employees_data.csv', encoding='UTF-8') as file:
                         count += 1
                         continue
                     else:
-                        cur.execute("INSERT INTO employees_data VALUES (%s, %s, %s, %s, %s, %s)",
+                        cur.execute("INSERT INTO employees VALUES (%s, %s, %s, %s, %s, %s)",
                                     (part[0], part[1], part[2], part[3], part[4], part[5]))
                         count += 1
     finally:
@@ -36,7 +36,7 @@ with open('north_data/customers_data.csv', encoding='UTF-8') as file:
                         count += 1
                         continue
                     else:
-                        cur.execute("INSERT INTO customers_data VALUES (%s, %s, %s)",
+                        cur.execute("INSERT INTO customers VALUES (%s, %s, %s)",
                                     (part[0], part[1], part[2]))
                         count += 1
     finally:
@@ -56,7 +56,7 @@ with open('north_data/orders_data.csv', encoding='UTF-8') as file:
                         count += 1
                         continue
                     else:
-                        cur.execute("INSERT INTO orders_data VALUES (%s, %s, %s, %s, %s)",
+                        cur.execute("INSERT INTO orders VALUES (%s, %s, %s, %s, %s)",
                                     (part[0], part[1], part[2], part[3], part[4]))
                         count += 1
     finally:
